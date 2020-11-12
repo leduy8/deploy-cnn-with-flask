@@ -1,7 +1,5 @@
 # * Remember to: set FLASK_APP=predict_app.py
 # * Type flask run to run
-# ? Type flask run --host=0.0.0.0 to set the IP to it and let others access it
-# ! Only set host when you trust the outside access-er
 import base64
 import io
 import numpy as np
@@ -50,8 +48,8 @@ def predict():
 
     response = {
         'prediction': {
-            'dog': prediction[0][0],
-            'cat': prediction[0][1]
+            'cat': prediction[0][0],
+            'dog': prediction[0][1]
         }
     }
 
